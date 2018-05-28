@@ -3,8 +3,8 @@ com/paigunna/api/service/ProviderActiveServiceImpl$1.class
 com/paigunna/api/controller/HomeController.class
 com/paigunna/api/domain/User.class
 com/paigunna/api/domain/UserStatus.class
-com/paigunna/api/rest/VehicleRest.class
 com/paigunna/api/AppStarter.class
+com/paigunna/api/rest/VehicleRest.class
 com/paigunna/api/repository/TransactionRepo.class
 com/paigunna/api/repository/UserRepo.class
 com/paigunna/api/service/OmisePaymentService.class
@@ -14,8 +14,8 @@ com/paigunna/api/service/OmisePaymentServiceImpl.class
 com/paigunna/api/domain/SocialType.class
 com/paigunna/api/service/VehicleNearbyServiceImpl$1.class
 com/paigunna/api/domain/Transaction.class
-com/paigunna/api/dto/VehicleDto.class
 com/paigunna/api/service/VehicleNearbyService.class
+com/paigunna/api/dto/VehicleDto.class
 com/paigunna/api/domain/VehicleType.class
 com/paigunna/api/repository/VehicleRepo.class
 com/paigunna/api/rest/UserRest.class

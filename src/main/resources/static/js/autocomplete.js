@@ -2,12 +2,11 @@ var map, infowindow, pos, panel, source, destination, directionsService, directi
     radius = '4000', service, desName, type, rate, pricemotor, amount, totalDistance, placeName;
 var markers = [];
 var mapOption = {
-    center: { lat: 13.7248936, lng: 100.4930262 },
+    center: {lat: 13.7248936, lng: 100.4930262},
     zoom: 16,
     disableDefaultUI: true,
     zoomControl: true
 };
-var test1, test2;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), mapOption);
@@ -68,7 +67,6 @@ function geoLocation(map) {
             infoWindow.open(map);
             map.setCenter(pos);
             console.log('Current location => lat : ' + position.coords.latitude + ' lng : ' + position.coords.longitude)
-
 
 
         }, function () {
@@ -264,6 +262,7 @@ function createMarker(place) {
         infowindow.open(map, this);
     });
 }
+
 function getRouteSearch(markerPos, place) {
     if (markers != null) {
         setMapOnAll(null);
@@ -290,11 +289,11 @@ function getRouteSearch(markerPos, place) {
 //  route detail
 function displayRoute(origin, destination, service, display) {
     service.route({
-        origin: origin,
-        destination: destination,
-        travelMode: 'DRIVING',
-        avoidTolls: true
-    },
+            origin: origin,
+            destination: destination,
+            travelMode: 'DRIVING',
+            avoidTolls: true
+        },
         function (response, status) {
             var index = 0;
             if (status === 'OK') {
@@ -366,11 +365,13 @@ function setTypeTaxi() {
     calPrice(35, rate, type);
 }
 
+var price1, price2, totalAmount, textTotalAmount;
+
 function calPrice(start, rate, type) {
-    var price1, price2, totalAmount, textTotalAmount;
+
     price1 = document.getElementById('price1');
     price2 = document.getElementById('price2');
-    textTotalAmount = document.getElementById('totalAmount'); 
+    textTotalAmount = document.getElementById('totalAmount');
     if (price2 != "") {
         price2.innerHTML = "";
     }
@@ -381,6 +382,10 @@ function calPrice(start, rate, type) {
     }
     totalAmount = (((0.0365) * amount) + amount).toFixed(2);
     price2.innerHTML = 'Price : ' + amount + ' &#3647';
+
+}
+
+function setTextOnItemPay() {
     if (document.getElementById('itemPay').style.display != 'block') {
         price1.innerHTML = 'Price : ' + amount + ' &#3647';
         textTotalAmount.innerHTML = 'Price(' + amount + ' &#3647) + Charge(3.65%)' + ' = ' + totalAmount + ' &#3647';
@@ -389,3 +394,18 @@ function calPrice(start, rate, type) {
         document.getElementById('destination').innerHTML = desName;
     }
 }
+
+function clearTextOnItemPay() {
+    price1.innerHTML = "";
+    textTotalAmount.innerHTML = "";
+    document.getElementById('total').innerHTML = "";
+    document.getElementById('totalTravel').innerHTML = "";
+    document.getElementById('destination').innerHTML = "";
+}
+
+function pay() {
+    document.getElementById('itemPay').style.display='none';
+    clearTextOnItemPay();
+}
+
+
