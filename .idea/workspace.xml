@@ -1,40 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c6645b9-288f-4b92-9b2d-97fcab597dae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7c6645b9-288f-4b92-9b2d-97fcab597dae" name="Default" comment="edit size popup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/autocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/autocomplete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/compiled.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/account.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/autocomplete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/compiled.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/firebaseInit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/noti.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/sidenavIniti.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/social-login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/Hamburger_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/Paigunna.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/Paigunna1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/logouser.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/user-default-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/user-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/wasin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/resources/yourlocation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/paigunna-api-1.0.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/paigunna-api-1.0.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,11 +36,16 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="521" column="22" selection-start-line="521" selection-start-column="22" selection-end-line="521" selection-end-column="22" />
+            <state relative-caret-position="144">
+              <caret line="8" column="90" lean-forward="true" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
               <folding>
                 <element signature="n#style#0;n#button#3;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#button#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -481,15 +455,31 @@
       <workItem from="1527407889142" duration="807000" />
       <workItem from="1527409138889" duration="6858000" />
       <workItem from="1527419098561" duration="3177000" />
-      <workItem from="1527491367340" duration="6673000" />
+      <workItem from="1527491367340" duration="9407000" />
     </task>
+    <task id="LOCAL-00001" summary="add Pay button and edit text on itempay detail">
+      <created>1527498571046</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527498571046</updated>
+    </task>
+    <task id="LOCAL-00002" summary="edit size popup">
+      <created>1527499872085</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527499872085</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79771000" />
+    <option name="totallyTimeSpent" value="82505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1920" height="1013" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -507,10 +497,10 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32956383" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.2627027" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.22058824" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.31135136" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29411766" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.29411766" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15368196" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
@@ -557,6 +547,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add Pay button and edit text on itempay detail" />
+    <MESSAGE value="edit size popup" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit size popup" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paigunna/api/service/VehicleNearbyServiceImpl.java">
@@ -857,11 +852,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="521" column="22" selection-start-line="521" selection-start-column="22" selection-end-line="521" selection-end-column="22" />
+        <state relative-caret-position="144">
+          <caret line="8" column="90" lean-forward="true" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
           <folding>
             <element signature="n#style#0;n#button#3;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#button#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
