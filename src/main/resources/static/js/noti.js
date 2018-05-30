@@ -44,12 +44,15 @@ function addNotiboxalert() {
 
     var contentalert = document.createTextNode("Error! Your request has a problem.");
 
+    Object.assign(notiboxalert.style,{width:"95%"});
+
     notiboxalert.innerHTML = notiboxalert.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
 
     notiboxalert.addEventListener('click', function () {
         removeNotibox(id);
         decreaseNumber();
     });
+
 
     notiboxalert.appendChild(contentalert);
 
@@ -65,6 +68,8 @@ function addNotiboxsucess() {
     var id = notiboxsuccess.getAttribute('id');
 
     var contentsuccess = document.createTextNode("Success! job successful.");
+
+    Object.assign(notiboxsuccess.style,{width:"95%"});
 
     notiboxsuccess.innerHTML = notiboxsuccess.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
 
@@ -88,6 +93,8 @@ function addNotiboxInfo() {
 
     var contentInfo = document.createTextNode("Info! User call service at");
 
+    Object.assign(notiboxInfo.style,{width:"95%"});
+
     notiboxInfo.innerHTML = notiboxInfo.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
 
     notiboxInfo.addEventListener('click', function () {
@@ -110,6 +117,8 @@ function addNotiboxWarning() {
     var id = notiboxWarning.getAttribute('id');
 
     var contentWarning = document.createTextNode("Warning! Indicates a warning that might need attention.");
+
+    Object.assign(notiboxWarning.style,{width:"95%"});
 
     notiboxWarning.innerHTML = notiboxWarning.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
 

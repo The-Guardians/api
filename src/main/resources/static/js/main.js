@@ -85,7 +85,7 @@ function time() {
 function decrease_num() {
     if (wait_time > 0) {
         var show_place = document.getElementById('show_text');
-        var min = (wait_time / 60)
+        var min = (wait_time / 60);
         var min1 = Math.floor(min);
         var sec = (wait_time % 60);
         show_place.innerHTML = "Wait(" + min1 + ":" + sec + " second)";
