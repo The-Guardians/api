@@ -27,38 +27,6 @@ function decreaseNumber() {
 
 }
 
-function close1() {
-    document.getElementById('1').style.display = 'none';
-}
-
-function close2() {
-    document.getElementById('2').style.display = 'none';
-}
-
-function close3() {
-    document.getElementById('3').style.display = 'none';
-}
-
-function close4() {
-    document.getElementById('4').style.display = 'none';
-}
-
-//   ----------------------------------------------------------------
-function click1() {
-    document.getElementById('1').style.display = 'block';
-}
-
-function click2() {
-    document.getElementById('2').style.display = 'block';
-}
-
-function click3() {
-    document.getElementById('3').style.display = 'block';
-}
-
-function click4() {
-    document.getElementById('4').style.display = 'block';
-}
 
 function alertPopup() {
     alert("You have " + numnoti + " message in notify.");
