@@ -42,9 +42,7 @@ function callService() {
 }
 
 function wait() {
-    if (document.getElementById('itemPay').style.display != 'none') {
-        alert("คุณมียอดค้างชำระ กรุณาชำระเงิน");
-    } else {
+    if (document.getElementById('itemPay').style.display == 'none') {
         time();
         document.getElementById('call').style.display = 'none';
         document.getElementById('wait').style.display = 'block';
@@ -61,6 +59,18 @@ function coming() {
     document.getElementById('coming').style.display = 'block';
     document.getElementById('itemPay').style.display = 'block';
     document.getElementById('service').disabled = true;
+}
+
+function setTextConfirm() {
+    if (document.getElementById('itemPay').style.display != 'none') {
+        document.getElementById('textConfirm').innerHTML = "You have an outstanding balance. Please pay";
+        document.getElementById('conbtn').style.display = 'none';
+        document.getElementById('goPaybtn').style.display = 'block';
+    } else {
+        document.getElementById('textConfirm').innerHTML = "Are you sure ?";
+        document.getElementById('goPaybtn').style.display = 'none';
+        document.getElementById('conbtn').style.display = 'block';
+    }
 }
 
 var wait_time = 300; //5 minute

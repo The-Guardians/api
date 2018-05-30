@@ -3,10 +3,12 @@
 
 <head>
     <!-- Required meta tags always come first -->
+    <!--<link href="https://www.picz.in.th/images/2018/05/28/znlQ1k.png" rel="shortcut icon">-->
+    <link rel="icon" sizes="192x192" href="https://www.picz.in.th/images/2018/05/28/znlQ1k.png">
+    <title>Paigunna</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Paigunna</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -136,7 +138,6 @@
             <i class="fa fa-motorcycle"></i>
             <span class="clearfix d-none d-sm-inline-block">Route Detail</span>
         </button>
-        </button>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
             <div id="accountbtn">
                 <li class="nav-item">
@@ -176,7 +177,6 @@
             <div class="w3-center">
                 <br>
                 <img style="border-radius: 50%; height: 30%; width: 30%;" id="cusLogo1" alt="Avatar">
-                <!-- <img style="border-radius: 50%; height: 30%; width: 30%;" src="resources/wasin.jpg" alt="Avatar"> -->
             </div>
             <div class="container">
                 <br>
@@ -256,7 +256,7 @@
 
 <div class="modal fade" id="route" style="z-index:9999999;">
     <div class="modal-dialog" style="text-align: center">
-        <div class="modal-content" style="height:580px;padding: 2%;">
+        <div class="modal-content" style="height:500px;padding: 2%;margin-top: 13%;">
             <span class="w3-button w3-display-topright" style="color: orangered" data-dismiss="modal">&times;</span>
             <div class="title" style="margin-top: 6%;z-index: 999;">Route
             </div>
@@ -284,9 +284,9 @@
             </div>
             <div id="call" class="list-group" style="z-index: 9999999;">
                 <button type="button" style="padding: 10px;" class="btn btn-success" data-toggle="modal"
-                        data-target="#confirm">
+                        data-target="#confirm" onclick="setTextConfirm()">
                     <label style="margin-bottom: 5%">Call service
-                        <label>
+                    </label>
                 </button>
             </div>
             <div id="wait" class="list-group" style="z-index: 9999999;">
@@ -298,13 +298,13 @@
             <div id="coming" class="list-group" style="z-index: 9999999;">
                 <button id="service" type="button" style="padding: 10px;" class="btn btn-danger">
                     <label style="margin-bottom: 5%">Service is coming
-                        <label>
+                    </label>
                 </button>
             </div>
             <div id="test" class="list-group" style="z-index: 9999999;">
                 <button type="button" style="padding: 10px;" class="btn btn-danger" onclick="coming();">
                     <label style="margin-bottom: 5%">test(ถ้ามีคนกดรับ)
-                        <label>
+                    </label>
                 </button>
             </div>
         </div>
@@ -317,32 +317,31 @@
 
 <div class="modal fade" id="noti" style="z-index:9999999;">
     <div class="modal-dialog" style="text-align: center">
-        <div class="modal-content" style="height:550px;padding: 2%;">
+        <div class="modal-content" style="height:500px;padding: 2%;margin-top: 13%;">
             <span class="w3-button w3-display-topright" style="color: orangered" data-dismiss="modal">&times;</span>
             <div class="title" style="margin-top: 6%;z-index: 999;">Notifications
             </div>
 
             <div id="notimodule" class="table-responsive">
 
-                <button onclick="increaseNumber();alertPopup();addNotiboxalert();">alert</button>
-                <button onclick="increaseNumber();alertPopup();addNotiboxsucess();">sucess</button>
-                <button onclick="increaseNumber();alertPopup();addNotiboxInfo()">Info</button>
-                <button onclick="increaseNumber();alertPopup();addNotiboxWarning();">Warning</button>
+                <button onclick="click1();increaseNumber();alertPopup();addNotibox();">alert</button>
+                <button onclick="click2();increaseNumber();alertPopup();">sucess</button>
+                <button onclick="click3();increaseNumber();alertPopup();">Info</button>
+                <button onclick="click4();increaseNumber();alertPopup();">Warning</button>
 
-                <!--<div id="1" class="alert btn" onclick="close1();decreaseNumber();">-->
-                    <!--<strong>Error!</strong> Your request has a problem.-->
-                <!--</div>-->
-                <!--<div id="2" class="alert success btn" onclick="close2();decreaseNumber();">-->
-                    <!--<strong>Success!</strong> job successful.-->
-                <!--</div>-->
-                <!--<div id="3" class="alert info btn" onclick="close3();decreaseNumber();">-->
-                    <!--<strong>Info!</strong> User call service at <label id="myLocation"></label>-->
-                <!--</div>-->
-                <!--<div id="4" class="alert warning btn" onclick="close4();decreaseNumber();">-->
-                    <!--<strong>Warning!</strong> Indicates a warning that might need attention.-->
-                <!--</div>-->
+                <div id="1" class="alert btn" onclick="close1();decreaseNumber();">
+                    <strong>Error!</strong> Your request has a problem.
+                </div>
+                <div id="2" class="alert success btn" onclick="close2();decreaseNumber();">
+                    <strong>Success!</strong> job successful.
+                </div>
+                <div id="3" class="alert info btn" onclick="close3();decreaseNumber();">
+                    <strong>Info!</strong> User call service at <label id="myLocation"></label>
+                </div>
+                <div id="4" class="alert warning btn" onclick="close4();decreaseNumber();">
+                    <strong>Warning!</strong> Indicates a warning that might need attention.
+                </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -353,7 +352,7 @@
 
 <div class="modal fade" id="callhistory" style="z-index:9999999;">
     <div class="modal-dialog" style="text-align: center">
-        <div class="modal-content" style="height: 550px;padding: 2%;">
+        <div class="modal-content" style="height: 500px;padding: 2%;margin-top: 13%;">
             <span class="w3-button w3-display-topright" style="color: orangered" data-dismiss="modal">&times;</span>
             <div class="title" style="margin-top: 6%;z-index: 999;">History
             </div>
@@ -479,7 +478,7 @@
 
 <div class="modal fade" id="omise" style="z-index:9999999;">
     <div class="modal-dialog" style="text-align: center">
-        <div class="modal-content" style="height: 550px;padding: 2%;">
+        <div class="modal-content" style="height: 500px;padding: 2%;margin-top: 13%;">
             <span class="w3-button w3-display-topright" style="color: orangered" data-dismiss="modal">&times;</span>
             <div class="title" style="margin-top: 6%;z-index: 999;">List of pay
             </div>
@@ -518,6 +517,10 @@
                                     data-button-label="Pay now"></script>
                         </form>
                     </a>
+                    <button type="button" style="padding: 5px;" class="btn btn-danger" onclick="pay();">
+                        <label style="margin-bottom: 5%">test(ถ้าจ่ายเงินเรียบร้อยแล้ว)
+                        </label>
+                    </button>
                 </div>
             </div>
         </div>
@@ -528,7 +531,6 @@
 
 <!--Comfirm popup-->
 
-<!-- start modal-->
 <div class="modal fade" id="confirm" style="z-index: 999999999;">
     <div class="modal-dialog">
         <!-- Modal content-->
@@ -537,11 +539,14 @@
                 <h4 class="modal-title">Notice</h4>
             </div>
             <div class="modal-body">
-                <p>Are you sure ?</p>
+                <p><label id="textConfirm"></label></p>
             </div>
             <div class="modal-footer text-center">
-                <button type="button" title="continue" class="btn btn-success" data-dismiss="modal" onclick="wait();">
-                    Continue
+                <button id="conbtn" type="button" title="continue" class="btn btn-success" data-dismiss="modal"
+                        onclick="wait();setTextOnItemPay();">continue
+                </button>
+                <button id="goPaybtn" type="button" title="continue" class="btn btn-blue" data-toggle="modal"
+                        data-target="#omise" data-dismiss="modal">pay
                 </button>
                 <button type="button" title="go back" class="btn btn-danger" data-dismiss="modal">Go Back</button>
             </div>
