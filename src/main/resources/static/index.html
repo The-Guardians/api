@@ -3,7 +3,6 @@
 
 <head>
     <!-- Required meta tags always come first -->
-    <!--<link href="https://www.picz.in.th/images/2018/05/28/znlQ1k.png" rel="shortcut icon">-->
     <link rel="icon" sizes="192x192" href="https://www.picz.in.th/images/2018/05/28/znlQ1k.png">
     <title>Paigunna</title>
     <meta charset="utf-8">
@@ -23,14 +22,16 @@
 
 </head>
 
-<body class="fixed-sn black-skin" onload="zeroNumber()">
+<body class="fixed-sn black-skin" onload="zeroNumber();">
 
 <!--Double navigation-->
 <header>
     <!-- Sidebar navigation -->
     <ul id="slide-out" class="side-nav fixed sn-bg-4 custom-scrollbar">
+
+        <!-- Logo -->
+
         <div id="logoDefault">
-            <!-- Logo -->
             <li>
                 <div>
                     <a href="#" style="text-align: center;">
@@ -54,14 +55,16 @@
                     </a>
                 </div>
             </li>
-            <!-- /Logo -->
             <div style="text-align: center; margin-top: 40%;margin-bottom: 8%;font-weight: bold;">
                 <label id="cusName"></label>
             </div>
         </div>
+
+        <!-- /Logo -->
+
         <div style="text-align: center;">Service
-            <input type="checkbox" checked data-toggle="toggle" data-offstyle="danger" data-onstyle="success"
-                   data-on="&#10003" data-off="&#x2718">
+            <input id="toggle-event" type="checkbox" checked data-toggle="toggle" data-offstyle="danger" data-onstyle="success"
+                   data-on="&#10003" data-off="&#x2718" onclick="statusService();">
         </div>
         <li>
             <ul class="collapsible collapsible-accordion">
@@ -328,19 +331,6 @@
                 <button onclick="addNotiboxsucess();increaseNumber();alertPopup();">sucess</button>
                 <button onclick="addNotiboxInfo();increaseNumber();alertPopup();">Info</button>
                 <button onclick="addNotiboxWarning();increaseNumber();alertPopup();">Warning</button>
-
-                <!--<div id="1" class="alert btn" onclick="close1();decreaseNumber();">-->
-                    <!--<strong>Error!</strong> Your request has a problem.-->
-                <!--</div>-->
-                <!--<div id="2" class="alert success btn" onclick="close2();decreaseNumber();">-->
-                    <!--<strong>Success!</strong> job successful.-->
-                <!--</div>-->
-                <!--<div id="3" class="alert info btn" onclick="close3();decreaseNumber();">-->
-                    <!--<strong>Info!</strong> User call service at <label id="myLocation"></label>-->
-                <!--</div>-->
-                <!--<div id="4" class="alert warning btn" onclick="close4();decreaseNumber();">-->
-                    <!--<strong>Warning!</strong> Indicates a warning that might need attention.-->
-                <!--</div>-->
             </div>
         </div>
     </div>

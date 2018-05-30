@@ -32,16 +32,24 @@ function alertPopup() {
     alert("You have " + numnoti + " message in notify.");
 }
 
+var count = 0;
 
 function addNotiboxalert() {
     var notiboxalert = document.createElement('div');
 
     notiboxalert.className = 'alert btn';
-    notiboxalert.setAttribute('id', '1');
+    notiboxalert.setAttribute('id', count);
+    count++;
+    var id = notiboxalert.getAttribute('id');
 
     var contentalert = document.createTextNode("Error! Your request has a problem.");
 
-    notiboxalert.innerHTML = notiboxalert.innerHTML + "<span class='closebtn' onclick='removeNotibox();decreaseNumber();' >&times;</span>";
+    notiboxalert.innerHTML = notiboxalert.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
+
+    notiboxalert.addEventListener('click', function () {
+        removeNotibox(id);
+        decreaseNumber();
+    });
 
     notiboxalert.appendChild(contentalert);
 
@@ -52,11 +60,18 @@ function addNotiboxsucess() {
     var notiboxsuccess = document.createElement('div');
 
     notiboxsuccess.className = 'alert success btn';
-    notiboxsuccess.setAttribute('id', '1');
+    notiboxsuccess.setAttribute('id', count);
+    count++;
+    var id = notiboxsuccess.getAttribute('id');
 
     var contentsuccess = document.createTextNode("Success! job successful.");
 
-    notiboxsuccess.innerHTML = notiboxsuccess.innerHTML + "<span class='closebtn' onclick='removeNotibox();decreaseNumber();' >&times;</span>";
+    notiboxsuccess.innerHTML = notiboxsuccess.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
+
+    notiboxsuccess.addEventListener('click', function () {
+        removeNotibox(id);
+        decreaseNumber();
+    });
 
     notiboxsuccess.appendChild(contentsuccess);
 
@@ -67,11 +82,18 @@ function addNotiboxInfo() {
     var notiboxInfo = document.createElement('div');
 
     notiboxInfo.className = 'alert info btn';
-    notiboxInfo.setAttribute('id', '1');
+    notiboxInfo.setAttribute('id', count);
+    count++;
+    var id = notiboxInfo.getAttribute('id');
 
     var contentInfo = document.createTextNode("Info! User call service at");
 
-    notiboxInfo.innerHTML = notiboxInfo.innerHTML + "<span class='closebtn' onclick='removeNotibox();decreaseNumber();' >&times;</span>";
+    notiboxInfo.innerHTML = notiboxInfo.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
+
+    notiboxInfo.addEventListener('click', function () {
+        removeNotibox(id);
+        decreaseNumber();
+    });
 
     notiboxInfo.appendChild(contentInfo);
 
@@ -82,40 +104,27 @@ function addNotiboxWarning() {
     var notiboxWarning = document.createElement('div');
 
     notiboxWarning.className = 'alert warning btn';
-    notiboxWarning.setAttribute('id', '1');
+    notiboxWarning.setAttribute('id', count);
+    count++;
+
+    var id = notiboxWarning.getAttribute('id');
 
     var contentWarning = document.createTextNode("Warning! Indicates a warning that might need attention.");
 
-    notiboxWarning.innerHTML = notiboxWarning.innerHTML + "<span class='closebtn' onclick='removeNotibox();decreaseNumber();' >&times;</span>";
+    notiboxWarning.innerHTML = notiboxWarning.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
+
+    notiboxWarning.addEventListener('click', function () {
+        removeNotibox(id);
+        decreaseNumber();
+    });
 
     notiboxWarning.appendChild(contentWarning);
 
     document.getElementById('notimodule').appendChild(notiboxWarning);
 }
 
-function removeNotibox() {
+function removeNotibox(id) {
 
-    var test = document.getElementById('1');
+    var test = document.getElementById(id);
     test.parentNode.removeChild(test);
-    // var test2 = document.getElementById('2');
-    // test2.parentNode.removeChild(test2);
-    // var test3 = document.getElementById('3');
-    // test3.parentNode.removeChild(test3);
-    // var test4 = document.getElementById('4');
-    // test4.parentNode.removeChild(test4);
-
 }
-
-// var close = document.getElementsByClassName("closebtn");
-// var i;
-//
-// for (i = 0; i < close.length; i++) {
-//     close[i].onclick = function(){
-//         var div = this.parentElement;
-//         div.style.opacity = "0";
-//         setTimeout(function(){ sss.style.display = "none"; }, 600);
-//     }
-// }
-
-
-    

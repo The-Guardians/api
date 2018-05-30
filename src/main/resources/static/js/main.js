@@ -8,10 +8,6 @@ document.getElementById('price').style.display = 'none';
 document.getElementById('itemPay').style.display = 'none';
 document.getElementById('omise').style.display = 'none';
 document.getElementById('select').disabled = true;
-document.getElementById('1').style.display = 'none';
-document.getElementById('2').style.display = 'none';
-document.getElementById('3').style.display = 'none';
-document.getElementById('4').style.display = 'none';
 document.getElementById('cusNameAndLogo').style.display = 'none';
 document.getElementById('call').style.display = 'none';
 document.getElementById('wait').style.display = 'none';
@@ -32,6 +28,12 @@ function login() {
     document.getElementById('logoDefault').style.display = 'none';
     document.getElementById('cusNameAndLogo').style.display = 'block';
 }
+
+// function statusService() {
+//         $('#toggle-event').change(function() {
+//             $(this).prop('check');
+//         })
+// }
 
 function callService() {
     document.getElementById('wait').style.display = 'none';
