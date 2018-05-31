@@ -390,7 +390,6 @@ function setTextOnItemPay() {
     if (document.getElementById('itemPay').style.display != 'block') {
         price1.innerHTML = 'Price : ' + amount + ' &#3647';
         textTotalAmount.innerHTML = 'Price(' + amount + ' &#3647) + Charge(3.65%)' + ' = ' + totalAmount + ' &#3647';
-        document.getElementById('total').innerHTML = totalDistance + ' km';
         document.getElementById('totalTravel').innerHTML = 'item #1 (  ' + totalDistance + ' km)';
         document.getElementById('destination').innerHTML = desName;
     }
