@@ -13,6 +13,7 @@ document.getElementById('call').style.display = 'none';
 document.getElementById('wait').style.display = 'none';
 document.getElementById('coming').style.display = 'none';
 document.getElementById('logoDefault').style.display = 'block';
+document.getElementById('notiminibox').style.display = 'none';
 
 /*--test--*/
 document.getElementById('test').style.display = 'none';
@@ -102,32 +103,3 @@ function decrease_num() {
 function clearTime(){
     clearInterval(vela);
 }
-
-
-var HttpClient = function() {
-    this.get = function(aUrl, aCallback) {
-        var anHttpRequest = new XMLHttpRequest();
-        anHttpRequest.onreadystatechange = function() {
-            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
-                aCallback(anHttpRequest.responseText);
-        };
-
-        anHttpRequest.open( "GET", aUrl, true );
-        anHttpRequest.send( null );
-    }
-};
-
-function getUser() {
-    var client = new HttpClient();
-    client.get('/users', function(response) {
-        console.log(response);
-
-        var users = response;
-
-        console.log(users.id);
-
-
-    });
-}
-
-

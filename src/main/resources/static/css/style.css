@@ -395,3 +395,14 @@ set-box-shadow-cicis-menu-to-go {
   height: 50%;
   overflow: auto;
 }
+
+table, th, td
+{
+    margin:10px 0;
+    border:solid 1px #333;
+    padding:10px 20px;
+    font:15px Verdana;
+}
+th {
+    font-weight:bold;
+}

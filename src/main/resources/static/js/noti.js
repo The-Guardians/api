@@ -46,7 +46,7 @@ function addNotiboxalert() {
 
     Object.assign(notiboxalert.style,{width:"95%"});
 
-    notiboxalert.innerHTML = notiboxalert.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
+    notiboxalert.innerHTML = notiboxalert.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' ></span>";
 
     notiboxalert.addEventListener('click', function () {
         removeNotibox(id);
@@ -71,7 +71,7 @@ function addNotiboxsucess() {
 
     Object.assign(notiboxsuccess.style,{width:"95%"});
 
-    notiboxsuccess.innerHTML = notiboxsuccess.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
+    notiboxsuccess.innerHTML = notiboxsuccess.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' ></span>";
 
     notiboxsuccess.addEventListener('click', function () {
         removeNotibox(id);
@@ -95,7 +95,7 @@ function addNotiboxInfo() {
 
     Object.assign(notiboxInfo.style,{width:"95%"});
 
-    notiboxInfo.innerHTML = notiboxInfo.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
+    notiboxInfo.innerHTML = notiboxInfo.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' ></span>";
 
     notiboxInfo.addEventListener('click', function () {
         removeNotibox(id);
@@ -120,7 +120,7 @@ function addNotiboxWarning() {
 
     Object.assign(notiboxWarning.style,{width:"95%"});
 
-    notiboxWarning.innerHTML = notiboxWarning.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' >&times;</span>";
+    notiboxWarning.innerHTML = notiboxWarning.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' ></span>";
 
     notiboxWarning.addEventListener('click', function () {
         removeNotibox(id);
