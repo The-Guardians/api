@@ -1,5 +1,5 @@
 var map, infowindow, pos, panel, source, destination, directionsService, directionsDisplay,
-    radius = '4000', service, desName, type, rate, pricemotor, amount, totalDistance, placeName;
+    radius = '4000', service, desName, total, type, rate, pricemotor, amount, totalDistance, placeName;
 var markers = [];
 var mapOption = {
     center: {lat: 13.7248936, lng: 100.4930262},
@@ -295,8 +295,8 @@ function displayRoute(origin, destination, service, display) {
             avoidTolls: true
         },
         function (response, status) {
-            var index = 0;
             if (status === 'OK') {
+                console.log("test");
                 var route = response.routes[0];
                 var km, kmSplit;
                 display.setDirections(response);
@@ -372,6 +372,7 @@ function calPrice(start, rate, type) {
     price1 = document.getElementById('price1');
     price2 = document.getElementById('price2');
     textTotalAmount = document.getElementById('totalAmount');
+    console.log(totalDistance);
     if (price2 != "") {
         price2.innerHTML = "";
     }
@@ -404,7 +405,7 @@ function clearTextOnItemPay() {
 }
 
 function pay() {
-    document.getElementById('itemPay').style.display='none';
+    document.getElementById('itemPay').style.display = 'none';
     clearTextOnItemPay();
 }
 
