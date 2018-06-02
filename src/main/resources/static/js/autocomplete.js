@@ -3,7 +3,7 @@ var map, infowindow, pos, panel, source, destination, directionsService, directi
 var markers = [];
 var mapOption = {
     center: {lat: 13.7248936, lng: 100.4930262},
-    zoom: 16,
+    zoom: 13,
     disableDefaultUI: true,
     zoomControl: true
 };
@@ -66,7 +66,7 @@ function geoLocation(map) {
             markers.push(marker);
             infoWindow.open(map);
             map.setCenter(pos);
-            console.log('Current location => lat : ' + position.coords.latitude + ' lng : ' + position.coords.longitude)
+            console.log('Current location => lat : ' + position.coords.latitude + ' lng : ' + position.coords.longitude);
 
 
         }, function () {
@@ -120,7 +120,7 @@ function searchBox(map, infowindow) {
         }
         else {
             map.setCenter(place.geometry.location);
-            map.setZoom(17);
+            map.setZoom(13);
         }
         marker.setIcon(({
             url: place.icon,
@@ -176,28 +176,28 @@ function nearbyTour() {
     document.getElementById('select').disabled = true;
     setMapOnAll(null);
     geoLocation(map);
-    var myCurrentLocate = new google.maps.LatLng(pos);
-    var requestShop = {
+    let myCurrentLocate = new google.maps.LatLng(pos);
+    let requestShop = {
         location: myCurrentLocate,
         radius: radius,
         type: ['shopping_mall']
     };
-    var requestPark = {
+    let requestPark = {
         location: myCurrentLocate,
         radius: radius,
         type: ['park']
     };
-    var requestMovie = {
+    let requestMovie = {
         location: myCurrentLocate,
         radius: radius,
         type: ['movie_theater']
     };
-    var requestNight = {
+    let requestNight = {
         location: myCurrentLocate,
         radius: radius,
         type: ['night_club']
     };
-    var requestAmuusement = {
+    let requestAmuusement = {
         location: myCurrentLocate,
         radius: radius,
         type: ['amusement_park']
@@ -228,7 +228,7 @@ function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
             var place = results[i];
-            createMarker(results[i]);
+            createMarker(place);
         }
     }
 }
@@ -237,7 +237,7 @@ function createMarker(place) {
     var placeLoc = place.geometry.location;
     var marker = new google.maps.Marker({
         map: map,
-        position: place.geometry.location
+        position: placeLoc
     });
 
     marker.setAnimation(google.maps.Animation.DROP);
@@ -296,7 +296,6 @@ function displayRoute(origin, destination, service, display) {
         },
         function (response, status) {
             if (status === 'OK') {
-                console.log("test");
                 var route = response.routes[0];
                 var km, kmSplit;
                 display.setDirections(response);
@@ -365,14 +364,14 @@ function setTypeTaxi() {
     calPrice(35, rate, type);
 }
 
-var price1, price2, totalAmount, textTotalAmount;
+var price1, price2, textTotalAmount, totalAmount;
+
 
 function calPrice(start, rate, type) {
 
     price1 = document.getElementById('price1');
     price2 = document.getElementById('price2');
     textTotalAmount = document.getElementById('totalAmount');
-    console.log(totalDistance);
     if (price2 != "") {
         price2.innerHTML = "";
     }
@@ -392,6 +391,19 @@ function setTextOnItemPay() {
         textTotalAmount.innerHTML = 'Price(' + amount + ' &#3647) + Charge(3.65%)' + ' = ' + totalAmount + ' &#3647';
         document.getElementById('totalTravel').innerHTML = 'item #1 (  ' + totalDistance + ' km)';
         document.getElementById('destination').innerHTML = desName;
+        var pay = totalAmount * 100;
+        OmiseCard.configure({
+            publicKey: 'YOUR_PUBLIC_KEY',
+            image: 'https://www.picz.in.th/images/2018/05/28/znlQ1k.png',
+            amount: pay,
+            submitFormTarget: '#from-pay'
+        });
+// Configuring your own custom button
+        OmiseCard.configureButton('#pay-button', {
+            frameLabel: 'Paigunna',
+            submitLabel: 'PAY RIGHT NOW !'
+        });
+        OmiseCard.attach();
     }
 }
 
@@ -407,5 +419,6 @@ function pay() {
     document.getElementById('itemPay').style.display = 'none';
     clearTextOnItemPay();
 }
+
 
 
