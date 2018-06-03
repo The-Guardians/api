@@ -28,13 +28,15 @@ function decreaseNumber() {
 }
 
 
-function alertPopup() {
-    alert("You have " + numnoti + " message in notify.");
-}
+// function alertPopup() {
+//     alert("You have " + numnoti + " message in notify.");
+// }
 
 var count = 0;
 
 function addNotiboxPayFail() {
+    increaseNumber();
+    notifyMe()
     var notiboxalert = document.createElement('div');
 
     notiboxalert.className = 'alert btn';
@@ -60,6 +62,8 @@ function addNotiboxPayFail() {
 }
 
 function addNotiboxPaySuccess() {
+    increaseNumber();
+    notifyMe()
     var notiboxsuccess = document.createElement('div');
 
     notiboxsuccess.className = 'alert success btn';
@@ -84,6 +88,8 @@ function addNotiboxPaySuccess() {
 }
 
 function addNotiboxUserCall() {
+    increaseNumber();
+    notifyMe()
     var notiboxInfo = document.createElement('div');
 
     notiboxInfo.className = 'alert info btn';
@@ -108,6 +114,8 @@ function addNotiboxUserCall() {
 }
 
 function addNotiboxProvidersAccept() {
+    increaseNumber();
+    notifyMe()
     var notiboxInfo = document.createElement('div');
 
     notiboxInfo.className = 'alert info btn';
@@ -132,6 +140,8 @@ function addNotiboxProvidersAccept() {
 }
 
 function addNotiboxNotAccept() {
+    increaseNumber();
+    notifyMe()
     var notiboxWarning = document.createElement('div');
 
     notiboxWarning.className = 'alert warning btn';
@@ -160,4 +170,31 @@ function removeNotibox(id) {
 
     var test = document.getElementById(id);
     test.parentNode.removeChild(test);
+}
+
+
+function notifyMe() {
+    // Let's check if the browser supports notifications
+    if (!("Notification" in window)) {
+        alert("This browser does not support desktop notification");
+    }
+
+    // Let's check whether notification permissions have already been granted
+    else if (Notification.permission === "granted") {
+        // If it's okay let's create a notification
+        var notification = new Notification("You have " + numnoti + " message in notify.");
+    }
+
+    // Otherwise, we need to ask the user for permission
+    else if (Notification.permission !== "denied") {
+        Notification.requestPermission(function (permission) {
+            // If the user accepts, let's create a notification
+            if (permission === "granted") {
+                var notification = new Notification("You have " + numnoti + " message in notify.");
+            }
+        });
+    }
+
+    // At last, if the user has denied notifications, and you
+    // want to be respectful there is no need to bother them any more.
 }
