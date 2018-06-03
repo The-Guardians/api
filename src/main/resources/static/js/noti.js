@@ -175,9 +175,9 @@ function removeNotibox(id) {
 
 function notifyMe() {
     // Let's check if the browser supports notifications
-    // if (!("Notification" in window)) {
-    //     alert("This browser does not support desktop notification");
-    // }
+    if (!("Notification" in window)) {
+        alert("This browser does not support desktop notification");
+    }
 
     // Let's check whether notification permissions have already been granted
      if (Notification.permission === "granted") {
