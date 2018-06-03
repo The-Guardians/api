@@ -182,7 +182,12 @@ function notifyMe() {
     // Let's check whether notification permissions have already been granted
     else if (Notification.permission === "granted") {
         // If it's okay let's create a notification
-        var notification = new Notification("You have " + numnoti + " message in notify.");
+        var notification = new Notification("Hello", {
+            icon: "https://www.picz.in.th/images/2018/05/28/znlQ1k.png",
+            body: "You have " + numnoti + " message in notify."
+
+        });
+
     }
 
     // Otherwise, we need to ask the user for permission
@@ -190,7 +195,11 @@ function notifyMe() {
         Notification.requestPermission(function (permission) {
             // If the user accepts, let's create a notification
             if (permission === "granted") {
-                var notification = new Notification("You have " + numnoti + " message in notify.");
+                var notification = new Notification("Hello", {
+                    icon: "https://www.picz.in.th/images/2018/05/28/znlQ1k.png",
+                    body: "You have " + numnoti + " message in notify."
+
+                });
             }
         });
     }
