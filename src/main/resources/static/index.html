@@ -62,9 +62,11 @@
         <!-- /Logo -->
 
         <div style="text-align: center;">Service
-            <input id="toggle-event" type="checkbox" checked data-toggle="toggle" data-offstyle="danger" data-onstyle="success"
-                   data-on="&#10003" data-off="&#x2718" onclick="statusService();">
+            <input id="toggle-event" class="close" type="checkbox" checked data-toggle="toggle" data-offstyle="danger" data-onstyle="success"
+                   data-on="&#10003" data-off="&#x2718" onclick="">
         </div>
+        <button class="btn1">Hide</button>
+        <button class="btn2">Show</button>
         <li>
             <ul class="collapsible collapsible-accordion">
                 <li>
@@ -278,7 +280,7 @@
                     </div>
                 </a>
             </div>
-            <div id="route-panel" style="position: relative;overflow-y: auto;overflow-x: auto;margin-top: 4%;">
+            <div id="route-panel" style="position: relative;overflow-y: auto;overflow-x: auto;margin-top: 4%;width: auto;">
             </div>
             <div id="call" class="list-group" style="z-index: 9999999;">
                 <button type="button" style="padding: 10px;" class="btn btn-success" data-toggle="modal"
@@ -322,10 +324,12 @@
 
             <div id="notimodule" class="table-responsive">
 
-                <button onclick="addNotiboxalert();increaseNumber();alertPopup();addNotibox();">alert</button>
-                <button onclick="addNotiboxsucess();increaseNumber();alertPopup();">sucess</button>
-                <button onclick="addNotiboxInfo();increaseNumber();alertPopup();">Info</button>
-                <button onclick="addNotiboxWarning();increaseNumber();alertPopup();">Warning</button>
+                <button onclick="addNotiboxPayFail();increaseNumber();alertPopup();">PayFail</button>
+                <button onclick="addNotiboxPaySuccess();increaseNumber();alertPopup();">PaySuccess</button>
+                <button onclick="addNotiboxUserCall();increaseNumber();alertPopup();">UserCall</button>
+                <button onclick="addNotiboxProvidersAccept();increaseNumber();alertPopup();">ProvidersAccept</button>
+                <button onclick="addNotiboxNotAccept();increaseNumber();alertPopup();">ProvidersNotAccept</button>
+
             </div>
         </div>
     </div>

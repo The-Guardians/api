@@ -76,11 +76,11 @@ function setTextConfirm() {
     }
 }
 
-var wait_time = 300; //5 minute
+var wait_time = 10; //5 minute
 var vela;
 
 function time() {
-    wait_time = 300;
+    wait_time = 10;
     vela = setInterval("decrease_num()", 1000);
 }
 function decrease_num() {
@@ -96,6 +96,7 @@ function decrease_num() {
             clearTime();
             document.getElementById('wait').style.display = 'none';
             document.getElementById('call').style.display = 'block';
+
         }
     }
 }
@@ -103,3 +104,14 @@ function decrease_num() {
 function clearTime(){
     clearInterval(vela);
 }
+
+
+
+    // $(document).ready(function(){
+    //     $(".btn1").click(function(){
+    //         $().hide();
+    //     });
+    //     $(".btn2").click(function(){
+    //         $().show();
+    //     });
+    // });

@@ -34,7 +34,7 @@ function alertPopup() {
 
 var count = 0;
 
-function addNotiboxalert() {
+function addNotiboxPayFail() {
     var notiboxalert = document.createElement('div');
 
     notiboxalert.className = 'alert btn';
@@ -42,7 +42,7 @@ function addNotiboxalert() {
     count++;
     var id = notiboxalert.getAttribute('id');
 
-    var contentalert = document.createTextNode("Error! Your request has a problem.");
+    var contentalert = document.createTextNode("Error! Payment is not successful.");
 
     Object.assign(notiboxalert.style,{width:"95%"});
 
@@ -59,7 +59,7 @@ function addNotiboxalert() {
     document.getElementById('notimodule').appendChild(notiboxalert);
 }
 
-function addNotiboxsucess() {
+function addNotiboxPaySuccess() {
     var notiboxsuccess = document.createElement('div');
 
     notiboxsuccess.className = 'alert success btn';
@@ -67,7 +67,7 @@ function addNotiboxsucess() {
     count++;
     var id = notiboxsuccess.getAttribute('id');
 
-    var contentsuccess = document.createTextNode("Success! job successful.");
+    var contentsuccess = document.createTextNode("Success! Payment completed.");
 
     Object.assign(notiboxsuccess.style,{width:"95%"});
 
@@ -83,7 +83,7 @@ function addNotiboxsucess() {
     document.getElementById('notimodule').appendChild(notiboxsuccess);
 }
 
-function addNotiboxInfo() {
+function addNotiboxUserCall() {
     var notiboxInfo = document.createElement('div');
 
     notiboxInfo.className = 'alert info btn';
@@ -91,7 +91,7 @@ function addNotiboxInfo() {
     count++;
     var id = notiboxInfo.getAttribute('id');
 
-    var contentInfo = document.createTextNode("Info! User call service at");
+    var contentInfo = document.createTextNode("Info! User call service at " + placeName);
 
     Object.assign(notiboxInfo.style,{width:"95%"});
 
@@ -107,7 +107,31 @@ function addNotiboxInfo() {
     document.getElementById('notimodule').appendChild(notiboxInfo);
 }
 
-function addNotiboxWarning() {
+function addNotiboxProvidersAccept() {
+    var notiboxInfo = document.createElement('div');
+
+    notiboxInfo.className = 'alert info btn';
+    notiboxInfo.setAttribute('id', count);
+    count++;
+    var id = notiboxInfo.getAttribute('id');
+
+    var contentInfo = document.createTextNode("Info! Service provider accepted. Please wait 5 minutes until it arrives.");
+
+    Object.assign(notiboxInfo.style,{width:"95%"});
+
+    notiboxInfo.innerHTML = notiboxInfo.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' ></span>";
+
+    notiboxInfo.addEventListener('click', function () {
+        removeNotibox(id);
+        decreaseNumber();
+    });
+
+    notiboxInfo.appendChild(contentInfo);
+
+    document.getElementById('notimodule').appendChild(notiboxInfo);
+}
+
+function addNotiboxNotAccept() {
     var notiboxWarning = document.createElement('div');
 
     notiboxWarning.className = 'alert warning btn';
@@ -116,7 +140,7 @@ function addNotiboxWarning() {
 
     var id = notiboxWarning.getAttribute('id');
 
-    var contentWarning = document.createTextNode("Warning! Indicates a warning that might need attention.");
+    var contentWarning = document.createTextNode("Warning! Service provider is not accept. Please try again later.");
 
     Object.assign(notiboxWarning.style,{width:"95%"});
 
