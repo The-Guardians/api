@@ -4,8 +4,6 @@
     <list default="true" id="7c6645b9-288f-4b92-9b2d-97fcab597dae" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/noti.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/noti.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,7 +68,7 @@
       <file leaf-file-name="noti.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/noti.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
+            <state relative-caret-position="248">
               <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
             </state>
           </provider>
@@ -462,7 +460,7 @@
       <workItem from="1527491367340" duration="9407000" />
       <workItem from="1527666066790" duration="6689000" />
       <workItem from="1527754009087" duration="8982000" />
-      <workItem from="1528000690497" duration="9529000" />
+      <workItem from="1528000690497" duration="10019000" />
     </task>
     <task id="LOCAL-00001" summary="add Pay button and edit text on itempay detail">
       <created>1527498571046</created>
@@ -499,11 +497,25 @@
       <option name="project" value="LOCAL" />
       <updated>1528011501162</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add notibox 5 noti">
+      <created>1528012591857</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528012591857</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add notibox 5 noti v2">
+      <created>1528012931378</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1528012931378</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112821000" />
+    <option name="totallyTimeSpent" value="113311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -581,7 +593,8 @@
     <MESSAGE value="edit size popup" />
     <MESSAGE value="create history.js and history complete but Wait a history table" />
     <MESSAGE value="add notibox 5 noti" />
-    <option name="LAST_COMMIT_MESSAGE" value="add notibox 5 noti" />
+    <MESSAGE value="add notibox 5 noti v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="add notibox 5 noti v2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paigunna/api/service/VehicleNearbyService.java">
@@ -907,7 +920,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/noti.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
+        <state relative-caret-position="248">
           <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
         </state>
       </provider>

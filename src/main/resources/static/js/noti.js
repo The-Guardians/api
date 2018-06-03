@@ -180,7 +180,7 @@ function notifyMe() {
     }
 
     // Let's check whether notification permissions have already been granted
-     if (Notification.permission === "granted") {
+    else if (Notification.permission === "granted") {
         // If it's okay let's create a notification
         var notification = new Notification("You have " + numnoti + " message in notify.");
     }
