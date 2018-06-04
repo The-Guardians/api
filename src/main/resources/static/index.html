@@ -67,6 +67,9 @@
                    data-onstyle="success"
                    data-on="&#10003" data-off="&#x2718" onclick="statusService();">
         </div>
+        <button  onclick="">Hide</button>
+        <button  onclick="">Show</button>
+
         <li>
             <ul class="collapsible collapsible-accordion">
                 <li>
@@ -329,10 +332,12 @@
 
             <div id="notimodule" class="table-responsive">
 
-                <button onclick="addNotiboxalert();increaseNumber();alertPopup();addNotibox();">alert</button>
-                <button onclick="addNotiboxsucess();increaseNumber();alertPopup();">sucess</button>
-                <button onclick="addNotiboxInfo();increaseNumber();alertPopup();">Info</button>
-                <button onclick="addNotiboxWarning();increaseNumber();alertPopup();">Warning</button>
+                <button onclick="addNotiboxPayFail();">PayFail</button>
+                <button onclick="addNotiboxPaySuccess();">PaySuccess</button>
+                <button onclick="addNotiboxUserCall();">UserCall</button>
+                <button onclick="addNotiboxProvidersAccept();">ProvidersAccept</button>
+                <button onclick="addNotiboxNotAccept();">ProvidersNotAccept</button>
+
             </div>
         </div>
     </div>
@@ -352,8 +357,7 @@
                 <div id="historyData" style="position: relative;overflow-y: auto;overflow-x: auto;max-height: 87%;
                     white-space: nowrap;">
                 </div>
-                <div style="color: #dd131b">ตอนนี้ทดลอง Query จากตาราง user ก่อน รอฝั่ง Back end สร้างตาราง History
-                </div>
+                <div style="color: #dd131b">ตอนนี้ทดลอง Query จากตาราง user ก่อน รอฝั่ง Back end สร้างตาราง History</div>
             </div>
         </div>
     </div>
