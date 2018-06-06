@@ -380,7 +380,9 @@ function calPrice(start, rate, type) {
     } else {
         amount = ((totalDistance * rate) + start);
     }
-    totalAmount = (((0.0365) * amount) + amount).toFixed(2);
+    var temp = ((0.0365) * amount) * 0.07;
+    console.log((0.0365) * amount + " => " + temp);
+    totalAmount = ((((0.0365) * amount) + temp) + amount).toFixed(2);
     price2.innerHTML = 'Price : ' + amount + ' &#3647';
 
 }
@@ -388,12 +390,12 @@ function calPrice(start, rate, type) {
 function setTextOnItemPay() {
     if (document.getElementById('itemPay').style.display != 'block') {
         price1.innerHTML = 'Price : ' + amount + ' &#3647';
-        textTotalAmount.innerHTML = 'Price(' + amount + ' &#3647) + Charge(3.65%)' + ' = ' + totalAmount + ' &#3647';
+        textTotalAmount.innerHTML = 'Price(' + amount + ' &#3647) + Charge(3.65%+7%(7% of 3.65%))' + ' = ' + totalAmount + ' &#3647';
         document.getElementById('totalTravel').innerHTML = 'item #1 (  ' + totalDistance + ' km)';
         document.getElementById('destination').innerHTML = desName;
         var pay = totalAmount * 100;
         OmiseCard.configure({
-            publicKey: 'YOUR_PUBLIC_KEY',
+            publicKey: 'pkey_test_5c6hzz4imabmprsj6zy',
             image: 'https://www.picz.in.th/images/2018/05/28/znlQ1k.png',
             amount: pay,
             submitFormTarget: '#from-pay'
@@ -410,7 +412,6 @@ function setTextOnItemPay() {
 function clearTextOnItemPay() {
     price1.innerHTML = "";
     textTotalAmount.innerHTML = "";
-    document.getElementById('total').innerHTML = "";
     document.getElementById('totalTravel').innerHTML = "";
     document.getElementById('destination').innerHTML = "";
 }
@@ -419,6 +420,5 @@ function pay() {
     document.getElementById('itemPay').style.display = 'none';
     clearTextOnItemPay();
 }
-
 
 

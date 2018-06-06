@@ -27,16 +27,11 @@ function decreaseNumber() {
 
 }
 
-
-// function alertPopup() {
-//     alert("You have " + numnoti + " message in notify.");
-// }
-
 var count = 0;
 
 function addNotiboxPayFail() {
     increaseNumber();
-    notifyMe()
+
     var notiboxalert = document.createElement('div');
 
     notiboxalert.className = 'alert btn';
@@ -45,6 +40,10 @@ function addNotiboxPayFail() {
     var id = notiboxalert.getAttribute('id');
 
     var contentalert = document.createTextNode("Error! Payment is not successful.");
+
+    var text = "Error! Payment is not successful.";
+
+    notifyMe(text);
 
     Object.assign(notiboxalert.style,{width:"95%"});
 
@@ -63,7 +62,6 @@ function addNotiboxPayFail() {
 
 function addNotiboxPaySuccess() {
     increaseNumber();
-    notifyMe()
     var notiboxsuccess = document.createElement('div');
 
     notiboxsuccess.className = 'alert success btn';
@@ -72,6 +70,10 @@ function addNotiboxPaySuccess() {
     var id = notiboxsuccess.getAttribute('id');
 
     var contentsuccess = document.createTextNode("Success! Payment completed.");
+
+    var text = "Success! Payment completed.";
+
+    notifyMe(text);
 
     Object.assign(notiboxsuccess.style,{width:"95%"});
 
@@ -89,7 +91,6 @@ function addNotiboxPaySuccess() {
 
 function addNotiboxUserCall() {
     increaseNumber();
-    notifyMe()
     var notiboxInfo = document.createElement('div');
 
     notiboxInfo.className = 'alert info btn';
@@ -98,6 +99,10 @@ function addNotiboxUserCall() {
     var id = notiboxInfo.getAttribute('id');
 
     var contentInfo = document.createTextNode("Info! User call service at " + placeName);
+
+    var text = "Info! User call service at " + placeName;
+
+    notifyMe(text);
 
     Object.assign(notiboxInfo.style,{width:"95%"});
 
@@ -115,7 +120,6 @@ function addNotiboxUserCall() {
 
 function addNotiboxProvidersAccept() {
     increaseNumber();
-    notifyMe()
     var notiboxInfo = document.createElement('div');
 
     notiboxInfo.className = 'alert info btn';
@@ -124,6 +128,10 @@ function addNotiboxProvidersAccept() {
     var id = notiboxInfo.getAttribute('id');
 
     var contentInfo = document.createTextNode("Info! Service provider accepted. Please wait 5 minutes until it arrives.");
+
+    var text = "Info! Service provider accepted. Please wait 5 minutes until it arrives.";
+
+    notifyMe(text);
 
     Object.assign(notiboxInfo.style,{width:"95%"});
 
@@ -141,7 +149,7 @@ function addNotiboxProvidersAccept() {
 
 function addNotiboxNotAccept() {
     increaseNumber();
-    notifyMe()
+
     var notiboxWarning = document.createElement('div');
 
     notiboxWarning.className = 'alert warning btn';
@@ -152,9 +160,13 @@ function addNotiboxNotAccept() {
 
     var contentWarning = document.createTextNode("Warning! Service provider is not accept. Please try again later.");
 
+    var text = "Warning! Service provider is not accept. Please try again later.";
+
     Object.assign(notiboxWarning.style,{width:"95%"});
 
     notiboxWarning.innerHTML = notiboxWarning.innerHTML + "<span class='closebtn' onclick='removeNotibox(id);decreaseNumber();' ></span>";
+
+    notifyMe(text);
 
     notiboxWarning.addEventListener('click', function () {
         removeNotibox(id);
@@ -173,7 +185,7 @@ function removeNotibox(id) {
 }
 
 
-function notifyMe() {
+function notifyMe(textBody) {
     // Let's check if the browser supports notifications
     if (!("Notification" in window)) {
         alert("This browser does not support desktop notification");
@@ -181,15 +193,15 @@ function notifyMe() {
 
     // Let's check whether notification permissions have already been granted
     else if (Notification.permission === "granted") {
+        console.log("1");
         // If it's okay let's create a notification
         var notification = new Notification("Hello", {
             icon: "https://www.picz.in.th/images/2018/05/28/znlQ1k.png",
-            body: "You have " + numnoti + " message in notify."
+            body: textBody
 
         });
 
     }
-
     // Otherwise, we need to ask the user for permission
     else if (Notification.permission !== "denied") {
         Notification.requestPermission(function (permission) {
@@ -197,7 +209,7 @@ function notifyMe() {
             if (permission === "granted") {
                 var notification = new Notification("Hello", {
                     icon: "https://www.picz.in.th/images/2018/05/28/znlQ1k.png",
-                    body: "You have " + numnoti + " message in notify."
+                    body: textBody
 
                 });
             }

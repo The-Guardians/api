@@ -67,8 +67,6 @@
                    data-onstyle="success"
                    data-on="&#10003" data-off="&#x2718" onclick="statusService();">
         </div>
-        <button  onclick="">Hide</button>
-        <button  onclick="">Show</button>
 
         <li>
             <ul class="collapsible collapsible-accordion">
@@ -101,11 +99,15 @@
                                 <a href="#" class="waves-effect" data-toggle="modal" data-target="#help">
                                     <i class="fa fa-book" aria-hidden="true"></i>Payment Process</a>
                             </li>
+                            <li>
+                                <a href="#" class="waves-effect" data-toggle="modal" data-target="#help">
+                                    <i class="fa fa-book" aria-hidden="true"></i>Call service</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <a class="collapsible-header waves-effect arrow-r omise-checkout-button" data-toggle="modal"
+                    <a title="Pay" class="collapsible-header waves-effect arrow-r omise-checkout-button" data-toggle="modal"
                        data-target="#omise">
                         <i class="fa fa-credit-card-alt" aria-hidden="true"></i> Pay
                         <!-- <i class="fa fa-angle-down rotate-icon"></i> -->
@@ -125,26 +127,26 @@
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-        <button type="button" class="btn btn-primary" style="margin-left:1.5%" onclick="nearbyHostel()">
+        <button title="Hostel" type="button" class="btn btn-primary" style="margin-left:1.5%" onclick="nearbyHostel()">
             <i class="fa fa-bed"></i>
             <span class="clearfix d-none d-sm-inline-block">Hostel</span>
         </button>
-        <button type="button" class="btn btn-warning" style="margin-left:0.5%" onclick="nearbyTour();">
+        <button title="tourist attraction" type="button" class="btn btn-warning" style="margin-left:0.5%" onclick="nearbyTour();">
             <i class="fa fa-suitcase"></i>
             <span class="clearfix d-none d-sm-inline-block">tourist attraction</span>
         </button>
-        <button type="button" class="btn btn-danger" style="margin-left:0.5%" onclick="nearbyRes();">
+        <button title="Restaurant" type="button" class="btn btn-danger" style="margin-left:0.5%" onclick="nearbyRes();">
             <i class="fa fa-cutlery"></i>
             <span class="clearfix d-none d-sm-inline-block">Restaurant</span>
         </button>
-        <button type="button" class="btn btn-success" style="margin-left:0.5%" data-toggle="modal" data-target="#route">
+        <button title="Route Detail" type="button" class="btn btn-success" style="margin-left:0.5%" data-toggle="modal" data-target="#route">
             <i class="fa fa-motorcycle"></i>
             <span class="clearfix d-none d-sm-inline-block">Route Detail</span>
         </button>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
             <div id="accountbtn">
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="modal" data-target="#account">
+                    <a title="Account" class="nav-link" data-toggle="modal" data-target="#account">
                         <i class="fa fa-user"></i>
                         <span class="clearfix d-none d-sm-inline-block">Account</span>
                     </a>
@@ -152,7 +154,7 @@
             </div>
             <div id="signoutbtn">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html" style="color: red;">
+                    <a title="Sign out" class="nav-link" href="index.html" style="color: red;">
                         <i class="fa fa-sign-out"></i>
                         <span class="clearfix d-none d-sm-inline-block">Sign out</span>
                     </a>
@@ -176,10 +178,10 @@
 <div class="modal fade" id="account">
     <div class="modal-dialog" style="text-align: center">
         <div class="modal-content">
-            <span class="w3-button w3-display-topright" style="color: orangered" data-dismiss="modal">&times;</span>
+            <span title="close" class="w3-button w3-display-topright" style="color: orangered" data-dismiss="modal">&times;</span>
             <div class="w3-center">
                 <br>
-                <img style="border-radius: 50%; height: 30%; width: 30%;" id="cusLogo1" alt="Avatar">
+                <img title="your picture" style="border-radius: 50%; height: 30%; width: 30%;" id="cusLogo1" alt="Avatar">
             </div>
             <div class="container">
                 <br>
@@ -219,7 +221,7 @@
                         </td>
                     </div>
                 </tr>
-                <button type="button" class="btn btn-success" style="margin-left:0.5%" data-toggle="modal"
+                <button title="add vehicle info" type="button" class="btn btn-success" style="margin-left:0.5%" data-toggle="modal"
                         data-target="#vehicleInfo">
                     <i class="fa fa-plus"></i>
                     <span class="clearfix d-none d-sm-inline-block">add vehicle info</span>
@@ -243,12 +245,12 @@
 
         <form class="form-signin" id="sign">
             <div class="w3-section">
-                <button class="btn-lg btn-block w3-button w3-indigo" style="font-weight: bold" type="button"
+                <button title="Sign in with Facebook" class="btn-lg btn-block w3-button w3-indigo" style="font-weight: bold" type="button"
                         onclick="login()">
                     <i class="fa fa-facebook-f" aria-hidden="true"></i> Sign in with Facebook
                 </button>
 
-                <button class="btn-lg btn-block w3-button w3-red" style="font-weight: bold" type="button"
+                <button title="Sign in with Google" class="btn-lg btn-block w3-button w3-red" style="font-weight: bold" type="button"
                         onclick="login()">
                     <i class="fa fa-google" aria-hidden="true"></i> Sign in with Google
                 </button>
@@ -266,23 +268,23 @@
     <div class="modal-dialog" style="text-align: center">
         <div class="modal-content" style="height:500px;padding: 2%;margin-top: 13%;">
             <span class="w3-button w3-display-topright" style="color: orangered" data-dismiss="modal">&times;</span>
-            <div class="title" style="margin-top: 6%;z-index: 999;">Route
+            <div class="title" style="margin-top: 6%;z-index: 999;">Route and call service
             </div>
             <div class="list-group" style="z-index: 9999999;">
                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <button id="select" class="btn btn-secondary dropdown-toggle" type="button" style="float: left;"
+                    <button title="Select vehicle" id="select" class="btn btn-secondary dropdown-toggle" type="button" style="float: left;"
                             id="dropdownMenu2" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                         Select vehicle
                     </button>
-                    <span id="price" style="float: right;margin-top: 3%">
+                    <span title="price" id="price" style="float: right;margin-top: 3%">
                             <label id="price2"></label>
                         </span>
                     <div id="type" class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button" value="1" onclick="callService();setTypeMotor();">
+                        <button title="Motorcycle" class="dropdown-item" type="button" value="1" onclick="callService();setTypeMotor();">
                             Motorcycle
                         </button>
-                        <button class="dropdown-item" type="button" value="2" onclick="callService();setTypeTaxi();">
+                        <button title="Taxi" class="dropdown-item" type="button" value="2" onclick="callService();setTypeTaxi();">
                             Taxi
                         </button>
                     </div>
@@ -291,25 +293,25 @@
             <div id="route-panel" style="position: relative;overflow-y: auto;overflow-x: auto;margin-top: 4%;">
             </div>
             <div id="call" class="list-group" style="z-index: 9999999;">
-                <button type="button" style="padding: 10px;" class="btn btn-success" data-toggle="modal"
+                <button title="Call service" type="button" style="padding: 10px;" class="btn btn-success" data-toggle="modal"
                         data-target="#confirm" onclick="setTextConfirm()">
                     <label style="margin-bottom: 5%">Call service
                     </label>
                 </button>
             </div>
             <div id="wait" class="list-group" style="z-index: 9999999;">
-                <button type="button" style="padding: 10px;" class="btn btn-warning"
+                <button title="wait or cancel" type="button" style="padding: 10px;" class="btn btn-warning"
                         onclick="callService();clearTime();">
                     <span style="margin-bottom: 5%" id="show_text"></span>
                 </button>
             </div>
             <div id="coming" class="list-group" style="z-index: 9999999;">
-                <button id="service" type="button" style="padding: 10px;" class="btn btn-danger">
+                <button title="Service is coming" id="service" type="button" style="padding: 10px;" class="btn btn-danger">
                     <label style="margin-bottom: 5%">Service is coming
                     </label>
                 </button>
             </div>
-            <div id="test" class="list-group" style="z-index: 9999999;">
+            <div title="test(ถ้ามีคนกดรับ)" id="test" class="list-group" style="z-index: 9999999;">
                 <button type="button" style="padding: 10px;" class="btn btn-danger" onclick="coming();">
                     <label style="margin-bottom: 5%">test(ถ้ามีคนกดรับ)
                     </label>
@@ -332,11 +334,11 @@
 
             <div id="notimodule" class="table-responsive">
 
-                <button onclick="addNotiboxPayFail();">PayFail</button>
-                <button onclick="addNotiboxPaySuccess();">PaySuccess</button>
-                <button onclick="addNotiboxUserCall();">UserCall</button>
-                <button onclick="addNotiboxProvidersAccept();">ProvidersAccept</button>
-                <button onclick="addNotiboxNotAccept();">ProvidersNotAccept</button>
+                <button title="PayFail" onclick="addNotiboxPayFail();">PayFail</button>
+                <button title="PaySuccess" onclick="addNotiboxPaySuccess();">PaySuccess</button>
+                <button title="UserCall" onclick="addNotiboxUserCall();">UserCall</button>
+                <button title="ProvidersAccept" onclick="addNotiboxProvidersAccept();">ProvidersAccept</button>
+                <button title="ProvidersNotAccept" onclick="addNotiboxNotAccept();">ProvidersNotAccept</button>
 
             </div>
         </div>
@@ -357,7 +359,8 @@
                 <div id="historyData" style="position: relative;overflow-y: auto;overflow-x: auto;max-height: 87%;
                     white-space: nowrap;">
                 </div>
-                <div style="color: #dd131b">ตอนนี้ทดลอง Query จากตาราง user ก่อน รอฝั่ง Back end สร้างตาราง History</div>
+                <div style="color: #dd131b">ตอนนี้ทดลอง Query จากตาราง user ก่อน รอฝั่ง Back end สร้างตาราง History
+                </div>
             </div>
         </div>
     </div>
@@ -399,7 +402,7 @@
     <div class="modal-dialog" style="text-align: center">
         <div class="modal-content" style="height: 500px;padding: 2%;margin-top: 13%;">
             <span class="w3-button w3-display-topright" style="color: orangered" data-dismiss="modal">&times;</span>
-            <div class="title" style="margin-top: 6%;z-index: 999;">List of pay
+            <div class="title" style="margin-top: 6%;z-index: 999;">Pay
             </div>
             <div class="list-group">
                 <div id="itemPay">
@@ -407,18 +410,18 @@
                         <h5 class="mb-1" style="text-align: left">
                             <label id="totalTravel"></label>
                             <span style="float: right;">
-                                    <label id="price1"></label>
+                                    <label title="price" id="price1"></label>
                                 </span>
                             <div class="input-group" style="width: 100%;">
                                 <div class="form-control" style="width: 100%">
-                                    <div class="form-control" style="margin-right: 3%;width: 100%">
+                                    <div title="Source" class="form-control" style="margin-right: 3%;width: 100%">
                                         <marquee direction="left" onmouseout="this.start()" onmouseover="this.stop()"
                                                  scrollamount="2" scrolldelay="4">
                                             Your Location
                                         </marquee>
                                     </div>
                                     <span type="text" style="text-align: center;margin-left: auto;margin-right: auto;"> to </span>
-                                    <div class="form-control" style="margin-left: 3%;width: 100%">
+                                    <div title="Destination" class="form-control" style="margin-left: 3%;width: 100%">
                                         <marquee direction="left" onmouseout="this.start()" onmouseover="this.stop()"
                                                  scrollamount="2" scrolldelay="4">
                                             <label id="destination"></label>
@@ -428,19 +431,20 @@
                             </div>
                         </h5>
                         <h6 style="color: orangered;">*** credit card charge : 3.65% ***</h6>
-                        <h6 id="totalAmount" style="color: orangered;"></h6>
+                        <h6 title="total price" id="totalAmount" style="color: orangered;"></h6>
                         <div class="form">
                             <div>
                                 <!-- Create your own button -->
-                                <button class="btn btn-success" type="submit" id="pay-button">Pay now</button>
+                                <button title="Pay now" class="btn btn-success" type="submit" id="pay-button">Pay now</button>
                             </div>
 
-                            <form id="from-pay" name="checkoutForm" method="POST" action="/checkout">
+                            <form id="from-pay" name="checkoutForm">
                                 <input type="hidden" name="sample-number" value="sample-5">
                             </form>
+
                         </div>
                     </a>
-                    <button type="button" style="padding: 5px;" class="btn btn-danger" onclick="pay();">
+                    <button title="test" type="button" style="padding: 5px;" class="btn btn-danger" onclick="pay();">
                         <label style="margin-bottom: 5%">test(ถ้าจ่ายเงินเรียบร้อยแล้ว)
                         </label>
                     </button>
@@ -468,7 +472,7 @@
                 <button id="conbtn" type="button" title="continue" class="btn btn-success" data-dismiss="modal"
                         onclick="wait();setTextOnItemPay();">continue
                 </button>
-                <button id="goPaybtn" type="button" title="continue" class="btn btn-blue" data-toggle="modal"
+                <button id="goPaybtn" type="button" title="pay" class="btn btn-blue" data-toggle="modal"
                         data-target="#omise" data-dismiss="modal">pay
                 </button>
                 <button type="button" title="go back" class="btn btn-danger" data-dismiss="modal">Go Back</button>
@@ -484,7 +488,7 @@
 
 <div class="modal fade" id="vehicleInfo" style="z-index:9999999;">
     <div class="modal-dialog" style="text-align: center">
-        <div class="modal-content" style="height: 500px;padding: 2%;margin-top: 13%;">
+        <div class="modal-content" style="height: 500px;padding: 2%;margin-top: 13%;overflow: auto;">
             <span class="w3-button w3-display-topright" style="color: orangered" data-dismiss="modal">&times;</span>
             <div class="title" style="margin-top: 6%;z-index: 999;">Vehicle information
             </div>
@@ -495,7 +499,21 @@
                     </td>
                     <div id="brand">
                         <td>
-                            <input id="vehicleBrand" name="vehicleBrand" type="text" style="text-align: center;width: 81%;" placeholder="Enter vehicle brand">
+                            <input id="vehicleBrand" name="vehicleBrand" type="text"
+                                   style="text-align: center;width: 81%;" placeholder="Enter vehicle brand">
+                            <br>
+                        </td>
+                    </div>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        <label style="font-weight: bold">Model</label>
+                    </td>
+                    <div id="model">
+                        <td>
+                            <input id="vehicleModel" name="vehicleBrand" type="text"
+                                   style="text-align: center;width: 81%;" placeholder="Enter vehicle model">
                             <br>
                         </td>
                     </div>
@@ -507,20 +525,34 @@
                     </td>
                     <div id="vehicleNumber">
                         <td>
-                            <input id="vehicleNum" name="vehicleNum" type="text" style="text-align: center;width: 81%;" placeholder="Enter Vehicle registration number">
+                            <input id="vehicleNum" name="vehicleNum" type="text" style="text-align: center;width: 81%;"
+                                   placeholder="Enter Vehicle registration number">
                             <br>
                         </td>
                     </div>
                 </tr>
                 <br>
                 <td>
-                    <label>Upload Document</label>
+                    <label>Upload Document :</label>
+                    <div style="text-align: left;margin-left: 4%;">
+                        <label>1) Copy of ID card.</label>
+                        <br>
+                        <label>2) Copy of driving license.</label>
+                        <br>
+                        <label>3) Copy of Bank Account</label>
+                        <br>
+                        <label>4) Copy of books registered motorcycles</label>
+                        <br>
+                        <label>5) Copy of Accident Victims Protection Act(P.R.B.)</label>
+                        <br>
+                        <label>6) Copy of ID card of the vehicle owner. (If you are not a vehicle owner)</label>
+                    </div>
                 </td>
                 <br>
                 <div style="width: 100%;margin:auto;">
                     <div class="btn-blue">
-                    <input type="file" name="fileUploader" id="fileUploader"
-                           style="width: 70%;float: left !important;" multiple>
+                        <input title="choose file" type="file" name="fileUploader" id="fileUploader"
+                               style="width: 70%;float: left !important;" multiple>
                     </div>
                     <div style="float: right !important;">
                         <button title="Upload" type="button" onclick="uploadFile();" id="btnUpload"
@@ -534,7 +566,11 @@
                     <div id="divFiles" class="files">
                     </div>
                 </div>
-
+                <button title="submit" type="submit" class="btn btn-success" id="submit"
+                        style="display: none;">
+                    <i class="fa fa-check"></i>
+                    <span class="clearfix d-none d-sm-inline-block">Submit</span>
+                </button>
             </form>
         </div>
     </div>

@@ -20,6 +20,7 @@ function uploadFile() {
     for (var i = 0; i < file.files.length; i++) {
         uploadSingleFile(file.files[i], i);
     }
+    $('#submit').show();
 }
 
 function uploadSingleFile(file, i) {

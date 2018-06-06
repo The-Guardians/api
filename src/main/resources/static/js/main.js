@@ -62,6 +62,7 @@ function coming() {
     document.getElementById('coming').style.display = 'block';
     document.getElementById('itemPay').style.display = 'block';
     document.getElementById('service').disabled = true;
+    clearTime();
 }
 
 function setTextConfirm() {
@@ -96,6 +97,7 @@ function decrease_num() {
             clearTime();
             document.getElementById('wait').style.display = 'none';
             document.getElementById('call').style.display = 'block';
+            addNotiboxNotAccept();
 
         }
     }
@@ -104,14 +106,3 @@ function decrease_num() {
 function clearTime(){
     clearInterval(vela);
 }
-
-
-
-    // $(document).ready(function(){
-    //     $(".btn1").click(function(){
-    //         $().hide();
-    //     });
-    //     $(".btn2").click(function(){
-    //         $().show();
-    //     });
-    // });
