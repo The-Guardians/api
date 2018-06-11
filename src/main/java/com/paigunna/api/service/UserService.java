@@ -1,7 +1,11 @@
 package com.paigunna.api.service;
 
+import com.paigunna.api.domain.User;
+
 /**
  * @author Arm
  */
-public class UserService {
+public interface UserService {
+
+    User save(User user);
 }
