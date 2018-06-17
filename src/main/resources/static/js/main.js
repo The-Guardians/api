@@ -106,3 +106,20 @@ function decrease_num() {
 function clearTime(){
     clearInterval(vela);
 }
+
+function testpost(){
+
+    var xhr = new XMLHttpRequest();
+    var url = '/users';
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var json = JSON.parse(xhr.responseText);
+            console.log(json.email + ", " + json.firstName +" , "+ json.lastName);
+        }
+    };
+    var data = JSON.stringify({"email": "hey@mail.com", "firstName": "oiuwoiu","lastName": "qweqwe","socialId":"134568949561"});
+    xhr.send(data);
+
+}
